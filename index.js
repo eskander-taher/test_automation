@@ -32,6 +32,9 @@ async function commitChanges() {
 
     const gitCommit = await executeShellCommand(`git commit -m "add solution"`);
     console.log(gitCommit);
+
+    const gitPush = await executeShellCommand(`git push origin main"`);
+    console.log(gitPush);
   } catch (error) {
     console.error("Error:", error.message);
   }
